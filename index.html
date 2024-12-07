@@ -1,51 +1,55 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>批量上传图片</title>
+&它;!文档型HTML&TL;
+ < Html >
+ < 头 >
+     < 梅塔 查理特 = "utf-8" >
+     < 标题 > 恭喜，站点创建成功！ </ 标题 >
+     < 风格 >
+        .集装箱 {
+             宽度 : 60 % ;
+             保证金 : 10 %  汽车  0 ;
+             背景色 : #f0f0f0;
+             填充物 : 2 %  5 % ;
+             边缘半径 : 10 Px
+        }
+
+        Ul {
+             向左的 : 20 Px ;
+        }
+
+            李 {
+                line-height: 2.3
+            }
+
+        a {
+            color: #20a53a
+        }
+    </style>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var button = document.querySelector('.js-toggle-hidden');
+    if (button) {
+        button.click();
+    }
+});
+</script>
 </head>
 <body>
-    <h2>批量上传图片</h2>
-    <input type="file" id="fileInput" multiple>
-    <button onclick="uploadFiles()">上传文件</button>
-    <div id="status"></div>
-
+    <div class="container">
+        <h1>恭喜, 站点创建成功！</h1>
+        <h3>这是默认index.html，本页面由系统自动生成</h3>
+        <ul>
+            <li>本页面在FTP根目录下的index.html</li>
+            <li>您可以修改、删除或覆盖本页面</li>
+            <li>FTP相关信息，请到“面板系统后台 > FTP” 查看</li>
+        </ul>
+    </div>
     <script>
-        function uploadFiles() {
-            var fileInput = document.getElementById('fileInput');
-            var status = document.getElementById('status');
-
-            if (fileInput.files.length === 0) {
-                status.innerHTML = '请选择要上传的文件。';
-                return;
+        文件。 偶然者 ( "DOMContentLoaded" , 功能 ( )  {
+             Var  按钮 = document. 问卷选择器 ( '.js-toggle-hidden' ) ;
+             如果  ( 按钮 )  {
+                按钮。 点击 ( ) ;
             }
-
-            var formData = new FormData();
-
-            for (var i = 0; i < fileInput.files.length; i++) {
-                var file = fileInput.files[i];
-                formData.append('files[]', file, file.name);
-            }
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'upload.php', true);
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    status.innerHTML = '文件上传成功。';
-                } else if (xhr.readyState === 4 && xhr.status !== 200) {
-                    status.innerHTML = '文件上传失败。';
-                }
-            };
-
-            xhr.upload.onprogress = function (e) {
-                if (e.lengthComputable) {
-                    var percentage = Math.round((e.loaded / e.total) * 100);
-                    status.innerHTML = '上传中: ' + percentage + '%';
-                }
-            };
-
-            xhr.send(formData);
-        }
-    </script>
-</body>
-</html>
+         } ) ;
+         </ 剧本 >
+ </ 身体 >
+ </ Html >
